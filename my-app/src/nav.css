@@ -1,0 +1,32 @@
+.nav-link {
+  transition: background-color 0.5s, color 0.5s;
+  border-radius: 6px;
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #080808 !important;
+  cursor: pointer;
+}
+
+ 
+
+ nav.css
+
+Optional enhancements
+.navbar-brand {
+  font-size: 2rem;
+}
+
+input.form-control::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+ 
+@media (max-width: 576px) {
+  .navbar-nav {
+    gap: 1rem !important;
+  }
+}
