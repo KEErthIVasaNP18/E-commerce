@@ -1,45 +1,29 @@
-
-@keyframes zoomFade {
-  0% {
-    opacity: 0;
-    transform: scale(0.9) translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.carousel-caption h3,
-.carousel-caption p {
-  animation: zoomFade 1.2s ease-out;
-}
-
-/* Image Pan-in Effect */
-.carousel-item img {
-  transition: transform 4s ease-in-out, filter 1s;
-  transform: scale(1.05);
-}
-
-.carousel-item.active img {
-  transform: scale(1);
-}
-
-/* Optional: Caption Styling for Bold Look */
-.carousel-caption h3 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-.carousel-caption p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-
 .carousel-indicators {
-  z-index: 1 !important;  /* Lower than navbar */
-  position: relative;     /* Keep it in flow */
+  bottom: 15px;
+  position: absolute;
+  z-index: 2;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Dot container buttons */
+.carousel-indicators [data-bs-target] {
+  width: 30px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin: 0 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active dot */
+.carousel-indicators .active {
+  background-color: #000; /* You can use your brand color here */
+  transform: scale(1.2);
+}
+
+/* Hover effect */
+.carousel-indicators [data-bs-target]:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }

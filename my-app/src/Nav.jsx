@@ -6,7 +6,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark shadow-sm px-3 py-3" style={{  backgroundColor: '#062677ff'}}>
+    <nav className="navbar navbar-expand-lg navbar-dark shadow-sm px-3 py-3" style={{ backgroundColor: '#062677ff' }}>
       <div className="container-fluid">
         <Link to={'/'} className="navbar-brand fs-3 fw-semibold text-white text-decoration-none">Shoppiee</Link>
 
@@ -32,17 +32,17 @@ const Nav = () => {
           {/* Nav Links */}
           <ul className="navbar-nav ms-auto d-flex align-items-center gap-lg-3 mt-3 mt-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link text-white">Home</Link>
+              <Link to={"/"} className="nav-link text-white">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/carts" className="nav-link text-white">Cart</Link>
+              <Link to={'/cart'} className="nav-link text-white">Cart</Link>
             </li>
             <li className="nav-item">
               <Link to={'/posts/categories'} className="nav-link text-white">Categories</Link >
             </li>
             <li className="nav-item d-flex align-items-center">
-              
-              <span className="nav-link text-white"><FaRegCircleUser className="me-1" />Login / SignUp</span>
+
+              <Link className="nav-link text-white"><FaRegCircleUser className="me-1" />Login / SignUp</Link>
             </li>
           </ul>
         </div>

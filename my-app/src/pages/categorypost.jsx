@@ -8,20 +8,24 @@ function CategoryPost() {
     const [posts, setPosts] = useState([])
     const { id } = useParams()
 
-    const fetchPost = async () => {
-        const response = await axios.get(`http://localhost:5500/api/posts/category/${id}`)
-        setPosts(response.data)
-    }
-    const fetchCategory = async () => {
-        const response = await axios.get(`http://localhost:5500/api/category/${id}`)
-        setCategory(response.data)
-    }
+
 
 
     useEffect(() => {
-        fetchCategory()
-        fetchPost()
-    }, [id])
+        const fetchCategory = async () => {
+            const response = await axios.get(`http://localhost:5500/api/categories/${id}`);
+            setCategory(response.data);
+        };
+
+        const fetchPost = async () => {
+            const response = await axios.get(`http://localhost:5500/api/posts/category/${id}`);
+            setPosts(response.data);
+        };
+
+        fetchCategory();
+        fetchPost();
+    }, [id]);
+
 
 
     if (!category) {
@@ -43,7 +47,10 @@ function CategoryPost() {
                             <div key={product._id} className="col-md-4">
                                 <Post product={product} />
                             </div>
+
                         ))}
+
+
                     </div>
                 ) : (
                     <h3 className="text-muted text-center mt-5">No Products available</h3>

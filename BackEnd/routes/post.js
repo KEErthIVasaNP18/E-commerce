@@ -83,11 +83,12 @@ Router.get('/category/:categoryId', async (req, res) => {
     try {
         const categoryId = req.params.categoryId;
 
+
+        //validate 
         const categoryExists = await Category.findById(categoryId)
         if (!categoryExists) {
            return res.status(400).json({ message: 'invalid categoryId' });
         }
-
         const posts = await Post.find({ Category: categoryId }).populate('Category');
         res.status(200).json(posts)
     } catch (error) {

@@ -8,19 +8,19 @@ const CarouselComponent = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center"
-      style={{ height: '400px', backgroundColor: '#f8f9fa', marginTop:'-50px' }}
+      style={{ height: '400px', backgroundColor: '#f8f9fa' }}
     >
       <Carousel style={{ width: '1300px' }}>
         <Carousel.Item>
           <img
             className="d-block w-100"
             style={{ height: '300px', objectFit: 'cover' }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpmCs2VpfURk0-IPkW6B_D7fMT0z6ZYSJ_ww&s"
+            src="https://www.avikalp.com/cdn/shop/products/MWZ3562_wallpaper3.jpg?v=1746037673"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 style={{color:'white'}}>Birthday Dress for Women</h3>
-            <p style={{color:'white'}}> Light, breezy, and perfect for your sunny days  explore our latest collection of women's summer wear.</p>
+            <h3 style={{color:'black'}}>Birthday Dress for Women</h3>
+            <p style={{color:'black', fontWeight:'600'}}> Light, breezy, and perfect for your sunny days  explore our latest collection of women's summer wear.</p>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -28,12 +28,12 @@ const CarouselComponent = () => {
           <img
             className="d-block w-100"
             style={{ height: '300px', objectFit: 'cover' }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwG0GIiJOgHGSb2wCiyGrhU79cgFOiJ2qmQ&s"
+            src="https://www.avikalp.com/cdn/shop/products/MWZ3564_wallpaper1.jpg?v=1746037669"
             alt="Second slide"
           />
           <Carousel.Caption>
-            <h3>Fashions for women</h3>
-            <p>Turn heads with this stunning evening dress – where elegance meets confidence in every stitch.</p>
+            <h3  style={{color:'blue'}}>Fashions for women</h3>
+            <p  style={{color:'blue'}}>Turn heads with this stunning evening dress – where elegance meets confidence in every stitch.</p>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -41,7 +41,7 @@ const CarouselComponent = () => {
           <img
             className="d-block w-100"
             style={{ height: '300px', objectFit: 'cover' }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFaHVJBwwWlXbzBmHm573XpxUxf1vfitwNFQ&s"
+            src="https://media.istockphoto.com/id/1293366109/photo/this-one-match-perfect-with-me.jpg?s=612x612&w=0&k=20&c=wJ6yYbRrDfdmoViuQkX39s2z_0lCiNQYgEtLU--0EbY="
             alt="Third slide"
           />
           <Carousel.Caption>

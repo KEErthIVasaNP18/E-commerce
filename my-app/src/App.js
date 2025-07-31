@@ -1,18 +1,15 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-// import AdminPanel from './admin/AdminPanel';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import { useState } from 'react';
 import Footer from "./Footer";
-// import CarouselComponent from "./carousel";
 import Nav from "./Nav";
 import ProductList from "./pages/ProductList";
 import ProductDetails from './pages/ProductDetails';
-// import AddToCart from './pages/Cart';
 import AllCategories from './pages/AllCategory';
 import CategoryPost from './pages/categorypost';
+import { CartProvider } from './CartContext';
+import CartPage from './pages/CartPage';
 
 
 function App() {
@@ -22,25 +19,26 @@ function App() {
 
   return (
     <div className="App">
+      <CartProvider>
 
-      {/* <CarouselComponent /> */}
-      <BrowserRouter>
-        <Nav />
+        <BrowserRouter>
 
-        <Routes>
-          <Route path='/' element={<ProductList />} />
-          <Route path='/posts/:id' element={<ProductDetails />} />
-          <Route path="/posts/categories" element={<AllCategories />} />
-          <Route path='/category/:id' element={<CategoryPost/>}  />
-          {/* <Route path='/addtocart' element={<AddToCart/>} />
-          <Route path='/admin' element={<AdminPanel />} /> */}
+          <Nav />
 
+          <Routes>
+            <Route path='/' element={<ProductList />} />
+            <Route path='/posts/:id' element={<ProductDetails />} />
+            <Route path='/category/:id' element={<CategoryPost />} />
+            <Route path="/posts/categories" element={<AllCategories />} />
+            <Route path="/cart" element={<CartPage />} />
 
+          </Routes>
 
-        </Routes>
-        <Footer />
+          <Footer />
 
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
+
 
 
     </div>

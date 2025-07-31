@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import './post.css'
+import { useCart } from '../CartContext';
+
 
 function Post({ product }) {
+  const { addToCart } = useCart();
 
 
 
@@ -59,9 +62,10 @@ function Post({ product }) {
                                 </button>
                             </Link>
 
-                             <Link to={`/carts/${product._id}`}>
+                             <Link to={'/cart'} >
                                 <button
                                     className="btn w-40 mt-2"
+                                    onClick={() => addToCart(product)}
                                     style={{
                                         marginLeft: '5px',
                                         backgroundColor: '#1060c2ff',

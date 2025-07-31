@@ -4,8 +4,6 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const postRoutes = require('./routes/post')
 const categoryRoutes = require('./routes/category')
-const cartRoutes = require('./routes/cartRoutes')
-
 
 
 const app = express()
@@ -19,9 +17,9 @@ mongoose.connect('mongodb://localhost:27017/E_commerce')
 .catch(err => console.log('DB Error ',err) )
 
 app.use('/api/posts', postRoutes)
-app.use('/api/category', categoryRoutes)
-app.use('api/carts', cartRoutes)
+app.use('/api/categories', categoryRoutes)
 
 
 
 app.listen(PORT, () => console.log(`server running on port : ${PORT}`))
+
