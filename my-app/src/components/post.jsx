@@ -13,7 +13,7 @@ function Post({ product }) {
             <div className="bg-light py-5 min-vh-80">
 
                 <div className="container d-flex justify-content-center">
-                    <div className="card shadow rounded-4" style={{ maxWidth: '400px' }}>
+                    <div className="card shadow rounded-4" style={{ maxWidth: '350px' }}>
                         <img
                             src={product.Img}
                             alt="Product"

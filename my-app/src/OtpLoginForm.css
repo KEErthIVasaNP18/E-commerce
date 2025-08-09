@@ -1,0 +1,67 @@
+/* OtpLoginForm.css */
+
+.otp-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.otp-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.otp-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f1faff;
+}
+
+.otp-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.otp-button:hover {
+  background-color: #0056b3;
+}
+
+.otp-message {
+  margin-top: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .otp-container {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+
+  .otp-button,
+  .otp-input {
+    font-size: 15px;
+  }
+}

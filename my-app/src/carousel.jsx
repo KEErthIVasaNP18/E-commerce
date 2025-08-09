@@ -8,9 +8,9 @@ const CarouselComponent = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center"
-      style={{ height: '400px', backgroundColor: '#f8f9fa' }}
+      style={{ height: '400px', backgroundColor: '#f8f9fa', marginTop:'-35px' }}
     >
-      <Carousel style={{ width: '1300px' }}>
+      <Carousel style={{ width: '1400px' }}>
         <Carousel.Item>
           <img
             className="d-block w-100"
